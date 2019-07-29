@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Project;
 
 class PortfolioController extends Controller
 {
     public function index() {
-        return view('pages.portfolio');
+        $projects = Project::with('Photos')->get();
+        return view('pages.portfolio')->with('projects', $projects);
     }
 
     public function create() {
@@ -15,6 +17,28 @@ class PortfolioController extends Controller
     }
 
     public function store(Request $request) {
-        return;
+        $this->validate($request, [
+            'name' => 'required',
+            'cover_image' => 'image|max:1999'
+        ]);
+
+        $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+        $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+        $filenameToStore = $filename.'_'.time().'.'.$extension;
+
+        $path = $request->file('cover_image')->storeAs('public/project_covers', $filenameToStore);
+
+        $project = new Project;
+        $project->name = $request->input('name');
+        $project->description = $request->input('description');
+        $project->cover_image = $filenameToStore;
+
+        $project->save();
+
+        return redirect('/portfolio')->with('success', 'Project Created');
     }
 }

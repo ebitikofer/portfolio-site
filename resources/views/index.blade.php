@@ -24,7 +24,7 @@
             </div>
 
             <div class="links">
-                <a href="blog" id="current">Home</a>
+                <a href="/" id="current">Home</a>
                 <a href="blog">Blog</a>
                 <a href="portfolio">Portfolio</a>
                 <a href="https://github.com/ebitikofer">GitHub</a>

@@ -17,4 +17,4 @@ Route::get('/portfolio', 'PortfolioController@index');
 Route::get('/art', 'ArtController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/portfolio/create', 'PortfolioController@create');
-Route::get('/portfolio/store', 'PortfolioController@store');
+Route::post('/portfolio/store', 'PortfolioController@store');

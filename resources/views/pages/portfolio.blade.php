@@ -30,7 +30,50 @@
                 <a href="art">Art</a>
                 <a href="about">About</a>
             </div>
+
+            @if(count($projects) > 0)
+
+                <?php
+                    $colcount = count($projects);
+                    $i = 1;
+                ?>
+
+                <div id="projects">
+                    <div class="row text-center">
+                    @foreach($projects as $project)
+                        @if($i == $colcount)
+                        <div class="medium-4 columns end">
+                            <a href="/portfolio/{{$project->id}}">
+                                <img class="thumbnail" src="storage/project_covers/{{$project->cover_image}}" alt="{{$project->name}}">
+                            </a>
+                            <br>
+                            <h4>{{$project->name}}</h4>
+                        @else
+                        <div class="medium-4 columns">
+                            <a href="/portfolio/{{$project->id}}">
+                                <img class="thumbnail" src="storage/project_covers/{{$project->cover_image}}" alt="{{$project->name}}">
+                            </a>
+                            <br>
+                            <h4>{{$project->name}}</h4>
+                        @endif
+                        @if($i % 3 == 0)
+                            </div></div><div class="row text-center">
+                        @else
+                            </div>
+                        @endif
+                        <?php $i++; ?>
+                    @endforeach
+                    </div>
+                </div>
+            
+            @else
+
+                <p>No projects to display!</p>
+                
+            @endif
+
         </div>
+
     </div>
 
 @endsection
