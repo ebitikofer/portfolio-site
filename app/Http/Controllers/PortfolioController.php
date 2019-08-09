@@ -41,4 +41,9 @@ class PortfolioController extends Controller
 
         return redirect('/portfolio')->with('success', 'Project Created');
     }
+
+    public function show($id) {
+        $project = Project::with('Photos')->find($id);
+        return view('pages.show')->with('project', $project);
+    }
 }

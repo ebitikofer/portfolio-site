@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css">
 
         <!-- Styles -->
         <style>
@@ -91,6 +91,12 @@
                 margin-bottom: 30px;
             }
 
+            .scaled-thumb {
+                object-fit: scale-down;
+                width: 25vw;
+                /* height: 20vw; */
+            }
+
             #l1 {
                 animation: 1s ease-out 10s 1 slideInFromTop;
             }
@@ -100,12 +106,8 @@
     </head>
     <body>
 
-        <div class="row">
-
-            @include('inc.messages')
-            @yield('content')
-
-        </div>
+        @include('inc.messages')
+        @yield('content')
 
     </body>
 </html>
