@@ -11421,10 +11421,6 @@ body {
   text-align: center;
 }
 
-.title {
-  font-size: 84px;
-}
-
 .links > a {
   color: #fff;
   padding: 0 25px;
@@ -11442,14 +11438,6 @@ a {
 .links > #current {
   color: #999;
   cursor: default;
-}
-
-.m-b-md-ind {
-  margin-bottom: 100px;
-}
-
-.m-b-md {
-  margin-bottom: 30px;
 }
 
 .scaled-thumb {
