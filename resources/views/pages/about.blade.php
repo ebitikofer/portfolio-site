@@ -2,30 +2,16 @@
 
 @section('content')
 
-    <div class="flex-center position-ref quarter-height">
+    <div id="app">
 
-        @if (Route::has('login'))
-            <div class="top-right links">
-                @auth
-                    <a href="{{ url('/home') }}">Home</a>
-                @else
-                    <a href="{{ route('login') }}">Login</a>
+        <div class="flex-center position-ref quarter-height">
 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}">Register</a>
-                    @endif
-                @endauth
-            </div>
-        @endif
-
-        <div class="content">
-
-            <page-title :title="'about'"></page-title>
-
-            <navigation-links :current="'about'"></navigation-links>
+            <header-title :current-page="'{{ Request::path() }}'"></header-title>
 
         </div>
 
     </div>
+
+    <script src="{{ asset('js/app.js') }}"></script>
 
 @endsection
