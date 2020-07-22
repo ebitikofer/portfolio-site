@@ -141,14 +141,8 @@
         margin-bottom: 100px;
     }
 
-    .m-b-md {
-        margin-bottom: 30px;
-    }
-
-    .scaled-thumb {
-        object-fit: scale-down;
-        width: 25vw;
-        /* height: 20vw; */
+    .title {
+        font-size: 84px;
     }
 
     #l1 {

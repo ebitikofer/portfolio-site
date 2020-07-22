@@ -85,10 +85,6 @@
                 cursor: default;
             }
 
-            .m-b-md-ind {
-                margin-bottom: 100px;
-            }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
