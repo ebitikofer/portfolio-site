@@ -18,19 +18,13 @@
         @endif
 
         <div class="content">
-            <div class="title m-b-md">
-                <a id="l1">B<a><a id="l2">l<a><a id="l3">o<a><a id="l4">g<a>
-            </div>
 
-            <div class="links">
-                <a href="/">Home</a>
-                <a id="current">Blog</a>
-                <a href="portfolio">Portfolio</a>
-                <a href="https://github.com/ebitikofer">GitHub</a>
-                <a href="art">Art</a>
-                <a href="about">About</a>
-            </div>
+            <page-title :title="'blog'"></page-title>
+
+            <navigation-links :current="'blog'"></navigation-links>
+
         </div>
+
     </div>
 
 @endsection

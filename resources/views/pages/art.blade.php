@@ -3,6 +3,7 @@
 @section('content')
 
     <div class="flex-center position-ref quarter-height">
+
         @if (Route::has('login'))
             <div class="top-right links">
                 @auth
@@ -18,19 +19,13 @@
         @endif
 
         <div class="content">
-            <div class="title m-b-md">
-                <a id="l1">A<a><a id="l2">r<a><a id="l3">t<a>
-            </div>
 
-            <div class="links">
-                <a href="/">Home</a>
-                <a href="blog">Blog</a>
-                <a href="portfolio">Portfolio</a>
-                <a href="https://github.com/ebitikofer">GitHub</a>
-                <a id="current">Art</a>
-                <a href="about">About</a>
-            </div>
+            <page-title :title="'art'"></page-title>
+
+            <navigation-links :current="'art'"></navigation-links>
+
         </div>
+
     </div>
 
     <h1>{{$project->name}}</h1>
