@@ -1,6 +1,7 @@
 <template>
 
     <div class="links">
+
         <a :key="index" v-for="(llink, index) in llinks" :id="llink.id" :href="llink.url" :class="{ 'route-link': true, 'current': llink.isCurrent }">{{ llink.id }}</a>
         <!-- <a id="home" href="/">Home</a>
         <a id="blog" href="blog">Blog</a>
@@ -8,6 +9,7 @@
         <a id="github" href="https://github.com/ebitikofer">GitHub</a>
         <a id="art" href="art">Art</a>
         <a id="about" href="about">About</a> -->
+
     </div>
 
 </template>
@@ -57,21 +59,22 @@
             }
         },
         mounted() {
-            console.log('Hello');
             this.llinks.forEach(link => {
                 link.isCurrent = false;
                 if (this.current === link.id) {
+                    // console.log(this.current);
                     link.isCurrent = true;
                 }
+                console.log(link.isCurrent);
             });
             this.dayExpr = this.links
         },
         watch: {
             current: function () {
-                console.log(this.current);
                 this.llinks.forEach(link => {
                     link.isCurrent = false;
                     if (this.current === link.id) {
+                        // console.log(this.current);
                         link.isCurrent = true;
                     }
                 });
@@ -95,7 +98,7 @@
 }
 
 .current {
-    color: #999;
+    color: #999 !important;
     cursor: default;
 }
 
