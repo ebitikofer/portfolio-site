@@ -17,7 +17,7 @@
 <script>
 
     export default {
-        // name: 'navigation-links',
+        name: 'NavigationLinks',
         props: {
             current: String,
             // links: Array
