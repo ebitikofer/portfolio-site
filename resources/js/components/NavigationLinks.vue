@@ -30,11 +30,11 @@
                         url: '/',
                         isCurrent: false
                     },
-                    // {
-                    //     id: 'blog',
-                    //     url: 'blog',
-                    //     isCurrent: false
-                    // },
+                    {
+                        id: 'blog',
+                        url: 'blog',
+                        isCurrent: false
+                    },
                     {
                         id: 'portfolio',
                         url: 'portfolio',
@@ -50,11 +50,11 @@
                     //     url: 'art',
                     //     isCurrent: false
                     // },
-                    // {
-                    //     id: 'about',
-                    //     url: 'about',
-                    //     isCurrent: false
-                    // },
+                    {
+                        id: 'about',
+                        url: 'about',
+                        isCurrent: false
+                    },
                 ]
             }
         },
