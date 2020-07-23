@@ -1769,11 +1769,12 @@ __webpack_require__.r(__webpack_exports__);
         id: 'home',
         url: '/',
         isCurrent: false
-      }, {
-        id: 'blog',
-        url: 'blog',
-        isCurrent: false
-      }, {
+      }, // {
+      //     id: 'blog',
+      //     url: 'blog',
+      //     isCurrent: false
+      // },
+      {
         id: 'portfolio',
         url: 'portfolio',
         isCurrent: false
@@ -1853,8 +1854,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'PageTitle',
+  name: "PageTitle",
   props: {
     title: String
   },
@@ -1866,13 +1869,13 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     if (this.title) {
       var temp = this.title.charAt(0).toUpperCase() + this.title.slice(1);
-      this.text = temp.split('');
+      this.text = temp.split("");
     }
   },
   watch: {
     title: function title() {
       var temp = this.title.charAt(0).toUpperCase() + this.title.slice(1);
-      this.text = temp.split('');
+      this.text = temp.split("");
     }
   }
 });
@@ -6559,7 +6562,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n* {\n    color: #fff;\n    text-decoration: none;\n}\n.title {\n    font-size: 84px;\n}\n.m-b-md {\n    margin-bottom: 30px;\n}\n#l1 {\n    -webkit-animation: 1s ease-out 10s 1 slideInFromTop;\n            animation: 1s ease-out 10s 1 slideInFromTop;\n}\n\n", ""]);
+exports.push([module.i, "\n@-webkit-keyframes bounce {\n0%,\n    100% {\n        -webkit-transform: translateY(0);\n}\n50% {\n        -webkit-transform: translateY(-10px);\n}\n}\n@keyframes bounce {\n0%,\n    100% {\n        -webkit-transform: translateY(0);\n                transform: translateY(0);\n}\n50% {\n        -webkit-transform: translateY(-10px);\n                transform: translateY(-10px);\n}\n}\n* {\n    color: #fff;\n    text-decoration: none;\n}\n.title {\n    font-size: 84px;\n}\n.m-b-md {\n    margin-bottom: 30px;\n}\n#l1 {\n    /* animation: 1s ease-out 10s 1 slideInFromTop; */\n}\n.letter-bounce {\n    cursor: crosshair;\n}\n.letter-bounce:hover {\n    /* animation: bounce 2.5s infinite;\n    -webkit-animation: bounce 2.5s infinite;\n    -moz-animation: bounce 2.5s infinite;\n    -o-animation: bounce 2.5s infinite; */\n    -webkit-transform: translateY(-10%);\n            transform: translateY(-10%);\n}\n", ""]);
 
 // exports
 
@@ -38240,9 +38243,15 @@ var render = function() {
     "div",
     { staticClass: "title m-b-md" },
     _vm._l(_vm.text, function(letter, index) {
-      return _c("a", { key: index, attrs: { id: "l" + index } }, [
-        _vm._v(_vm._s(letter))
-      ])
+      return _c(
+        "a",
+        {
+          key: index,
+          staticClass: "letter-bounce",
+          attrs: { id: "l" + index }
+        },
+        [_vm._v(_vm._s(letter))]
+      )
     }),
     0
   )

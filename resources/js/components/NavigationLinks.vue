@@ -30,11 +30,11 @@
                         url: '/',
                         isCurrent: false
                     },
-                    {
-                        id: 'blog',
-                        url: 'blog',
-                        isCurrent: false
-                    },
+                    // {
+                    //     id: 'blog',
+                    //     url: 'blog',
+                    //     isCurrent: false
+                    // },
                     {
                         id: 'portfolio',
                         url: 'portfolio',
