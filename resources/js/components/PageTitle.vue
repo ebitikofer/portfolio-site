@@ -76,7 +76,7 @@
                     targets: event.target,
                     translateY: [-25, 0],
                     opacity: [0.1, 1],
-                    duration: 1500,
+                    duration: 10000,
                     delay: 0,
                     easing: 'easeOutElastic'
                 });

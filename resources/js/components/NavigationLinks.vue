@@ -66,10 +66,8 @@ export default {
         this.llinks.forEach(link => {
             link.isCurrent = false;
             if (this.current === link.id) {
-                // console.log(this.current);
                 link.isCurrent = true;
             }
-            console.log(link.isCurrent);
         });
         this.dayExpr = this.links;
     },
@@ -78,7 +76,6 @@ export default {
             this.llinks.forEach(link => {
                 link.isCurrent = false;
                 if (this.current === link.id) {
-                    // console.log(this.current);
                     link.isCurrent = true;
                 }
             });
@@ -98,7 +95,7 @@ export default {
                 targets: event.target,
                 translateY: [-25, 0],
                 opacity: [0.1, 1],
-                duration: 1500,
+                duration: 5000,
                 delay: 0,
                 easing: "easeOutElastic"
             });
