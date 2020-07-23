@@ -8,6 +8,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+window.anime = require('vue-animejs');
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -18,6 +20,8 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+
+Vue.use(anime);
 
 Vue.component('page-title', require('./components/PageTitle.vue').default);
 Vue.component('type-title', require('./components/TypeTitle.vue').default);
@@ -31,5 +35,8 @@ Vue.component('header-title', require('./components/HeaderTitle.vue').default);
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {
+        anime
+    }
 });

@@ -5,6 +5,8 @@
             v-for="(letter, index) in text"
             :id="'l' + index"
             class="letter-bounce"
+            @mouseover="mouseOver"
+            @mouseleave="mouseLeave"
             >{{ letter }}</a
         >
     </div>
@@ -18,6 +20,7 @@
 </template>
 
 <script>
+
     export default {
         name: "PageTitle",
         props: {
@@ -29,6 +32,24 @@
             };
         },
         mounted() {
+            const targets = this.$el
+            this.$anime
+                .timeline()
+                .add({
+                    targets,
+                    translateY: [-25, 0],
+                    opacity: [0.1, 1],
+                    duration: 1500,
+                    delay: 0,
+                    easing: 'easeOutElastic'
+                })
+            // .add({
+            //   targets,
+            //   rotate: '1turn',
+            //   translateY: 0,
+            //   duration: 2000,
+            //   delay: this.delay + 500
+            // })
             if (this.title) {
                 let temp = this.title.charAt(0).toUpperCase() + this.title.slice(1);
                 this.text = temp.split("");
@@ -38,6 +59,27 @@
             title: function() {
                 let temp = this.title.charAt(0).toUpperCase() + this.title.slice(1);
                 this.text = temp.split("");
+            }
+        },
+        methods: {
+            mouseOver: function(event) {
+                this.animateLetter(event, 1.2, 800, 400);   
+            },
+            mouseLeave: function(event) {
+                this.animateLetter(event, 1.0, 600, 300);   
+            },
+            animateLetter: function(event, scale, duration, elasticity) {
+                this.$anime.remove(event.target);
+                this.$anime
+                .timeline()
+                .add({
+                    targets: event.target,
+                    translateY: [-25, 0],
+                    opacity: [0.1, 1],
+                    duration: 1500,
+                    delay: 0,
+                    easing: 'easeOutElastic'
+                });
             }
         }
     };
@@ -106,6 +148,10 @@
         -webkit-animation: bounce 2.5s infinite;
         -moz-animation: bounce 2.5s infinite;
         -o-animation: bounce 2.5s infinite; */
-        transform: translateY(-10%);
+        /* transform: translateY(-10%); */
+        transform: rotateY(10deg);
+        -webkit-transform: rotateY(10deg);
+        -moz-transform: rotateY(10deg);
+        -o-transform: rotateY(10deg); 
     }
 </style>
