@@ -3100,11 +3100,8 @@ __webpack_require__.r(__webpack_exports__);
       link.isCurrent = false;
 
       if (_this.current === link.id) {
-        // console.log(this.current);
         link.isCurrent = true;
       }
-
-      console.log(link.isCurrent);
     });
     this.dayExpr = this.links;
   },
@@ -3116,7 +3113,6 @@ __webpack_require__.r(__webpack_exports__);
         link.isCurrent = false;
 
         if (_this2.current === link.id) {
-          // console.log(this.current);
           link.isCurrent = true;
         }
       });
@@ -3136,7 +3132,7 @@ __webpack_require__.r(__webpack_exports__);
         targets: event.target,
         translateY: [-25, 0],
         opacity: [0.1, 1],
-        duration: 1500,
+        duration: 5000,
         delay: 0,
         easing: "easeOutElastic"
       });
@@ -3227,7 +3223,7 @@ __webpack_require__.r(__webpack_exports__);
         targets: event.target,
         translateY: [-25, 0],
         opacity: [0.1, 1],
-        duration: 1500,
+        duration: 10000,
         delay: 0,
         easing: 'easeOutElastic'
       });
