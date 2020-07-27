@@ -90,9 +90,13 @@
             }
 
             .scaled-thumb {
-                object-fit: scale-down;
-                width: 25vw;
-                /* height: 20vw; */
+                object-fit: cover;
+                width: 20vw;
+                height: 20vw;
+            }
+
+            .projects-outer {
+                margin-top: 40px;
             }
 
             #l1 {

@@ -20,26 +20,18 @@
             ?>
 
             <div id="projects">
-                <div class="grid-x text-center">
+                <div class="grid-x text-center projects-outer">
                 @foreach($projects as $project)
                     @if($i == $colcount)
                     <div class="cell small-4 end">
-                        <a href="/portfolio/{{$project->id}}">
-                            <img class="thumbnail scaled-thumb" src="/storage/project_covers/{{$project->cover_image}}" alt="{{$project->name}}">
-                        </a>
-                        <br>
-                        <h4>{{$project->name}}</h4>
+                        <project-image :project="{{ $project }}" :delay="{{ $i }}"></project-image>
                     @else
                     <div class="cell small-4">
-                        <a href="/portfolio/{{$project->id}}">
-                            <img class="thumbnail scaled-thumb" src="/storage/project_covers/{{$project->cover_image}}" alt="{{$project->name}}">
-                        </a>
-                        <br>
-                        <h4>{{$project->name}}</h4>
+                        <project-image :project="{{ $project }}" :delay="{{ $i }}"></project-image>
                     @endif
                     @if($i % 3 == 0)
                         </div>
-                        </div><div class="grid-x text-center">
+                        </div><div class="grid-x text-center projects-outer">
                     @else
                         </div>
                     @endif
