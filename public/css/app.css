@@ -11390,6 +11390,10 @@ body {
   margin: 0;
 }
 
+img {
+  height: 20vw !important;
+}
+
 .full-height {
   height: 100vh;
 }
@@ -11441,10 +11445,10 @@ a {
 }
 
 .scaled-thumb {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 25vw;
-  /* height: 20vw; */
+  height: 25vw !important;
 }
 
 #l1 {
