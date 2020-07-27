@@ -17,6 +17,7 @@
         <a id="l6">B</a><a id="l7">i</a><a id="l8">t</a><a id="l9">i</a><a id="l10">k</a><a id="l11">o</a><a id="l12">f</a><a id="l13">e</a><a id="l14">r</a>
 
     </div> -->
+
 </template>
 
 <script>
@@ -38,18 +39,11 @@
                 .add({
                     targets,
                     translateY: [-25, 0],
-                    opacity: [0.1, 1],
-                    duration: 1500,
-                    delay: 0,
+                    opacity: [0, 1],
+                    duration: 2000,
+                    delay: 100,
                     easing: 'easeOutElastic'
                 })
-            // .add({
-            //   targets,
-            //   rotate: '1turn',
-            //   translateY: 0,
-            //   duration: 2000,
-            //   delay: this.delay + 500
-            // })
             if (this.title) {
                 let temp = this.title.charAt(0).toUpperCase() + this.title.slice(1);
                 this.text = temp.split("");
