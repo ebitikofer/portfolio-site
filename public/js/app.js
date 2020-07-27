@@ -3082,16 +3082,17 @@ __webpack_require__.r(__webpack_exports__);
         id: "github",
         url: "https://github.com/ebitikofer",
         isCurrent: false
-      }, // {
+      } // {
       //     id: 'art',
       //     url: 'art',
       //     isCurrent: false
       // },
-      {
-        id: "about",
-        url: "about",
-        isCurrent: false
-      }]
+      // {
+      //     id: "about",
+      //     url: "about",
+      //     isCurrent: false
+      // }
+      ]
     };
   },
   mounted: function mounted() {

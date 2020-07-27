@@ -55,11 +55,11 @@ export default {
                 //     url: 'art',
                 //     isCurrent: false
                 // },
-                {
-                    id: "about",
-                    url: "about",
-                    isCurrent: false
-                }
+                // {
+                //     id: "about",
+                //     url: "about",
+                //     isCurrent: false
+                // }
             ]
         };
     },
