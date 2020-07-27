@@ -6,7 +6,7 @@
 
             <page-title :title="currentPage"></page-title>
 
-            <navigation-links :current="currentPage"></navigation-links>
+            <navigation-bar :current="currentPage"></navigation-bar>
 
         </div>
 
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import NavigationLinks from './NavigationLinks.vue'
+    import NavigationBar from './NavigationBar.vue'
     import PageTitle from './PageTitle.vue'
 
     export default {
@@ -27,8 +27,8 @@
         },
         components: {
             PageTitle,
-            NavigationLinks
-        },
+            NavigationBar
+        }
     }
 
 </script>

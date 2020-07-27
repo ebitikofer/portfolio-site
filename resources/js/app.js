@@ -25,8 +25,9 @@ Vue.use(anime);
 
 Vue.component('page-title', require('./components/PageTitle.vue').default);
 Vue.component('type-title', require('./components/TypeTitle.vue').default);
-Vue.component('navigation-links', require('./components/NavigationLinks.vue').default);
+Vue.component('navigation-bar', require('./components/NavigationBar.vue').default);
 Vue.component('header-title', require('./components/HeaderTitle.vue').default);
+Vue.component('project-image', require('./components/ProjectImage.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

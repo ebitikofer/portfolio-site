@@ -23,7 +23,7 @@
 
                 <type-title></type-title>
 
-                <navigation-links :current="'home'"></navigation-links>
+                <navigation-bar :current="'home'"></navigation-bar>
 
             </div>
 
