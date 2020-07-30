@@ -69,7 +69,8 @@ export default {
 }
 
 .route-link:hover {
-    color: #1468a0;
+    color: #46b5ff;
+    /* color: #1468a0; */
 }
 
 .current {
