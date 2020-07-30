@@ -3,8 +3,8 @@
         <div
             class="link-wrapper"
             :key="index"
-            v-for="(llink, index) in llinks">
-            <navigation-link :link="llink" :delay="index"></navigation-link>
+            v-for="(link, index) in links">
+            <navigation-link :link="link" :delay="index"></navigation-link>
             <!-- <a id="home" href="/">Home</a>
             <a id="blog" href="blog">Blog</a>
             <a id="portfolio" href="portfolio">Portfolio</a>
@@ -24,63 +24,31 @@ export default {
         NavigationLink
     },
     props: {
-        current: String
-        // links: Array
-    },
-    data: () => {
-        return {
-            llinks: [
-                {
-                    id: "home",
-                    url: "/",
-                    isCurrent: false
-                },
-                // {
-                //     id: 'blog',
-                //     url: 'blog',
-                //     isCurrent: false
-                // },
-                {
-                    id: "portfolio",
-                    url: "portfolio",
-                    isCurrent: false
-                },
-                {
-                    id: "github",
-                    url: "https://github.com/ebitikofer",
-                    isCurrent: false
-                },
-                // {
-                //     id: 'art',
-                //     url: 'art',
-                //     isCurrent: false
-                // },
-                // {
-                //     id: "about",
-                //     url: "about",
-                //     isCurrent: false
-                // }
-            ]
-        };
+        current: String,
+        links: Array
     },
     mounted() {
-        this.llinks.forEach(link => {
-            link.isCurrent = false;
-            if (this.current === link.id) {
-                link.isCurrent = true;
-            }
-        });
-        this.dayExpr = this.links;
+        this.selectCurrent();
     },
     watch: {
         current: function() {
-            this.llinks.forEach(link => {
-                link.isCurrent = false;
-                if (this.current === link.id) {
-                    link.isCurrent = true;
-                }
-            });
-            this.dayExpr = this.links;
+            this.selectCurrent();
+        },
+        links: function() {
+            this.selectCurrent();
+        }
+    },
+    methods: {
+        selectCurrent: function() {
+            if(this.links) {
+                this.links.forEach(link => {
+                    console.log(this.current === link.id);
+                    link.isCurrent = false;
+                    if (this.current === link.id) {
+                        link.isCurrent = true;
+                    }
+                });
+            }
         }
     }
 };
