@@ -90,23 +90,4 @@ export default {
 .link-wrapper {
     display: inline-block;
 }
-
-.route-link {
-    color: #fff;
-    padding: 0 25px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.route-link:hover {
-    color: #1468a0;
-}
-
-.current {
-    color: #999 !important;
-    cursor: default;
-}
 </style>
