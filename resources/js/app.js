@@ -29,6 +29,7 @@ Vue.component('navigation-bar', require('./components/NavigationBar.vue').defaul
 Vue.component('navigation-link', require('./components/NavigationLink.vue').default);
 Vue.component('header-title', require('./components/HeaderTitle.vue').default);
 Vue.component('project-image', require('./components/ProjectImage.vue').default);
+Vue.component('portfolio-image', require('./components/PortfolioImage.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
