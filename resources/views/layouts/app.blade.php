@@ -103,6 +103,10 @@
                 animation: 1s ease-out 10s 1 slideInFromTop;
             }
 
+            .form-wrapper {
+                padding: 50px 100px 0px 100px
+            }
+
         </style>
 
     </head>
