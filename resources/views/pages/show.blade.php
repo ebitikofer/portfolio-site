@@ -34,7 +34,7 @@
                         <portfolio-image :link="`/project/{{ $photo->id }}`" :src="`/storage/photos/{{ $photo->project_id }}/{{ $photo->photo }}`" :title="`{{ $photo->title }}`" :delay="{{ $i }}"></portfolio-image>
                     @endif
                     @if($i % 3 == 0)
-                        </div></div><div class="grid-x text-center">
+                        </div></div><div class="grid-x text-center projects-outer">
                     @else
                         </div>
                     @endif
